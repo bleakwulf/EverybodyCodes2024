@@ -20,16 +20,16 @@ let bugPotionMatrix = new Map([
   [BUGS.DIABOLICAL_DRAGONFLY, 5],
 ]);
 
+/*[ group size, plus potions per group size ]*/
 let plusPotionsPerGroupSizeMatrix = new Map([
-  /*[ group size, plus potions per group size ]*/
   [2, 1],
   [3, 2],
 ]);
 
 try {
-  p1Data = fs.readFileSync(`${__dirname}/1105/p1.txt`, "utf8");
-  p2Data = fs.readFileSync(`${__dirname}/1105/p2.txt`, "utf8");
-  p3Data = fs.readFileSync(`${__dirname}/1105/p3.txt`, "utf8");
+  p1Data = fs.readFileSync(`${__dirname}/p1.txt`, "utf8");
+  p2Data = fs.readFileSync(`${__dirname}/p2.txt`, "utf8");
+  p3Data = fs.readFileSync(`${__dirname}/p3.txt`, "utf8");
 } catch (e) {
   console.log(`Error!`);
   console.error(e);
