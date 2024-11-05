@@ -13,6 +13,7 @@ const BUGS = {
   NON_BUG: "x",
 };
 
+/* [ bug type, # of potions to defeat ]  */
 let bugPotionMatrix = new Map([
   [BUGS.ANCIENT_ANT, 0],
   [BUGS.BADASS_BEETLE, 1],
@@ -20,12 +21,13 @@ let bugPotionMatrix = new Map([
   [BUGS.DIABOLICAL_DRAGONFLY, 5],
 ]);
 
-/*[ group size, plus potions per group size ]*/
+/*  [ group size, plus potions per group size ]  */
 let plusPotionsPerGroupSizeMatrix = new Map([
   [2, 1],
   [3, 2],
 ]);
 
+/*  parse spies' data  */
 try {
   p1Data = fs.readFileSync(`${__dirname}/p1.txt`, "utf8");
   p2Data = fs.readFileSync(`${__dirname}/p2.txt`, "utf8");
@@ -38,7 +40,7 @@ try {
 console.info(`${logHeaderPrefix} | ${challengeDayNo} : \n${challengeTitle}`);
 console.info(`==============================`);
 
-/*  get total potions according to grouped bug types from spies' data  */
+/*  get total required potions according to grouped bug types from spies' data  */
 const getTotalPotionsCount = (inputData, maxGroupSize = 1) => {
   const bugTypesSearch = Object.values(BUGS).join("");
 
