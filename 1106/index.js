@@ -8,9 +8,9 @@ const challengeTitle = "The Runes of Power";
 let p1Data, p2Data, p3Data;
 
 try {
-  p1Data = fs.readFileSync(`${__dirname}/1106/p1.txt`, "utf8");
-  p2Data = fs.readFileSync(`${__dirname}/1106/p2.txt`, "utf8");
-  p3Data = fs.readFileSync(`${__dirname}/1106/p3.txt`, "utf8");
+  p1Data = fs.readFileSync(`${__dirname}/p1.txt`, "utf8");
+  p2Data = fs.readFileSync(`${__dirname}/p2.txt`, "utf8");
+  p3Data = fs.readFileSync(`${__dirname}/p3.txt`, "utf8");
 } catch (e) {
   console.log(`Error!`);
   console.error(e);
